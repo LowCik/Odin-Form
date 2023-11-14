@@ -348,5 +348,22 @@ template {
   display: none;
 }
 /* END OF RESET*/
+body{
+  display: flex;
+  height:100vh
+}
+header{
+  min-width: min(300px,33vw);
+  
+  background-color: green;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  background-color:rgb(190, 184, 171);
 
+}
 
+legend{
+  background-color: aliceblue;
+}
