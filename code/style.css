@@ -354,24 +354,26 @@ body{
 }
 form{
   padding: calc(10vh) 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color:rgb(190, 184, 171);
+
 }
-div{
+div.presentation_text{
+  display: flex;
+  align-items: center;
+  max-width: min(33vw,400px);
   padding: 100px 30px;
+  text-align: center;
 }
 header{
   min-width: min(300px,33vw);
   
   background-color: green;
 }
-form {
-  display: flex;
-  flex-direction: column;
-  background-color:rgb(190, 184, 171);
-
-}
-
 .submit{
-  border: 1rem solid red;
+  border: 1px solid red;
   margin: 1rem;
 }
 
