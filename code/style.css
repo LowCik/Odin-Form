@@ -353,28 +353,34 @@ template {
 body {
 	--header-width: 33vw;
 	--body-width: 67vw;
-	--body-height: 96vh;
+	--body-height: 100vh;
+	--footer-height: 100px;
+	--form-color: lightgrey;
+	--presentation_text-color: grey;
+	--inside_form-color: rgb(179, 149, 137);
 	display: flex;
-
 	height: 100vh;
 }
 main {
 	display: flex;
 	min-width: var(--body-width);
-	height: var(--body-height);
+	height: calc(var(--body-height) - var(--footer-height));
 }
 form {
 	padding: calc(10vh) 0px;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	background-color: rgb(190, 184, 171);
+	background-color: var(--form-color);
 }
 div.presentation_text {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	padding: 100px 30px;
 	text-align: center;
+	background-color: var(--presentation_text-color);
+	width: calc(var(--body-width));
 }
 header {
 	min-width: var(--header-width);
@@ -388,11 +394,13 @@ header {
 
 legend {
 	background-color: aliceblue;
-	padding: 2rem;
+	padding: 2rem 1rem 40px 30px;
+	justify-content: space-around;
 }
 
 footer {
+	display: flex;
 	background-color: blue;
-	min-height: 100px;
-	min-width: 100px;
+	height: var(--footer-height);
+	min-width: 100vw;
 }
